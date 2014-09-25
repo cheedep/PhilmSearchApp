@@ -116,7 +116,7 @@ public class MoviesAdapter extends ArrayAdapter<Movie> {
 
         @Override
         protected Bitmap doInBackground(String... strings) {
-            String url = strings[0];
+            url = strings[0];
             InputStream inputStream = httpRetriever.retrieveStream(url);
             if(inputStream == null)
                 return null;

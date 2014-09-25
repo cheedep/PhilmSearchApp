@@ -10,6 +10,7 @@ public class Movie implements Serializable{
 
     private final String BASE_URL = "http://image.tmdb.org/t/p/";
     private final String SIZE = "w92"; //['w92', 'w154', 'w185', 'w342', 'w500', 'original']
+    private final String POSTER_SIZE = "w500";
     private final String SLASH = "/";
 
     public String score;
@@ -47,7 +48,14 @@ public class Movie implements Serializable{
 
     public String retrieveThumbnailUrl(){
         if(posterPath !=null && !posterPath.isEmpty())
-            return BASE_URL + SIZE + SLASH + posterPath;
+            return BASE_URL + SIZE + posterPath;
+
+        return null;
+    }
+
+    public String retrievePosterUrl(){
+        if(posterPath !=null && !posterPath.isEmpty())
+            return BASE_URL + POSTER_SIZE + posterPath;
 
         return null;
     }

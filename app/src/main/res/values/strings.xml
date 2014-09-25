@@ -9,5 +9,6 @@
     <string name="philmi_star">PhilmiStar</string>
     <string name="title_activity_movies_list">MoviesListActivity</string>
     <string name="no_movies_found">No movies found</string>
+    <string name="close">Close</string>
 
 </resources>
